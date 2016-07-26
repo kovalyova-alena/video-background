@@ -1,50 +1,52 @@
-header {
-    background-image: url("bg.jpg");
-    position: relative;
-    z-index: -1;
-}
-
-.bg-cover {
+.bg-cover{
+    background-image:url(bg.jpg);
+    position:relative;
+    z-index:1;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-video#bgvid {
-    position: absolute;
-    z-index: -1;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    overflow: hidden;
+
 }
 
-.video-bg__video {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-image: url(/assets/public/img/header_bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    overflow: hidden;
+#video-bg{
+    position:absolute;
+    z-index:-1;
+    left:0;
+    right:0;
+    top:0;
+    bottom:0;
+    overflow:hidden
 }
 
-.overlay {
-    position: absolute;
-    background-color: rgba(0,0,0,.4);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+#video-bg .video-bg__video{
+    position:fixed;
+    top:0;
+    left:0;
+    background:url(bg.jpg) no-repeat center;
+    background-size:cover;
+    min-width:100%;
+    min-height:100%;
+    width:auto;
+    height:auto;
+    overflow:hidden
+}
+#video-bg:after {
+    content:"";
+    display:block;
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.4)
 }
 
-.overlay h2 {
-    text-align: center;
+.content {
+    padding: 50px 30px;
     color: #fff;
+    text-align: center;
 }
+
+.content h2 {
+    line-height: 80px;
+}
+
 
