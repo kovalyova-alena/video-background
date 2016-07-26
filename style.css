@@ -1,7 +1,9 @@
 .video-bg {
     background: url("bg.jpg") no-repeat center;
+    width: 100%;
+    min-height: 300px;
+    background-size: cover;
 }
-
 video#bgvid {
      position: fixed;
      top:0;
@@ -17,7 +19,7 @@ video#bgvid {
 
 .overlay {
     position: absolute;
-    background-color: rgba(0,0,0,.4);
+
     width: 100%;
     height: 100%;
     top: 0;
