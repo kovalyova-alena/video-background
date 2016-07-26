@@ -1,33 +1,51 @@
-.video-bg {
-    background: url("bg.jpg") no-repeat center;
-    width: 100%;
-    min-height: 300px;
+#video-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 1;
+    background: url(bg.jpg) no-repeat center #94a233;
     background-size: cover;
 }
-video#bgvid {
-     position: fixed;
-     top:0;
-     left: 0;
+
+#video-bg > video {
+    position: absolute;
+    top: 0;
+    left: 0;
     min-width: 100%;
     min-height: 100%;
-     width: auto;
-     height: auto;
-     background: url("bg.jpg") no-repeat;
-     background-size: cover;
-    overflow: hidden;
+    width: auto;
+    height: auto;
+}
+
+@supports (object-fit: cover) {
+    #video-bg > video {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-device-width: 800px) {
+    #video-bg > video {
+        display: none;
+    }
 }
 
 .overlay {
     position: absolute;
-
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .overlay h2 {
-    text-align: center;
     color: #fff;
+    text-align: center;
 }
-
