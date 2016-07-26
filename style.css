@@ -1,17 +1,36 @@
-.video-bg {
-    background: url("bg.jpg") no-repeat center;
+header {
+    background-image: url("bg.jpg");
+    position: relative;
+    z-index: -1;
 }
 
+.bg-cover {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
 video#bgvid {
-     position: fixed;
-     top:0;
-     left: 0;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+}
+
+.video-bg__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(/assets/public/img/header_bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
     min-width: 100%;
     min-height: 100%;
-     width: auto;
-     height: auto;
-     background: url("bg.jpg") no-repeat;
-     background-size: cover;
+    width: auto;
+    height: auto;
     overflow: hidden;
 }
 
